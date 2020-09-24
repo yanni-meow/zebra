@@ -6,6 +6,11 @@
     .header__nav {
         font-size: 1.5rem;
     }
+
+    input[type=checkbox]:checked + .header__nav__list {
+        transform: translateX(0%);
+        transform: translateY(25%);
+    }
     
     .levis__logo {
         top: -15%;
@@ -30,7 +35,13 @@
         height: 50vh;
     }
 
-    /* .promo__item */
+    .promo a:last-child p {
+        background: #fff;
+        color: #f2ca66;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
     .categories {
         height: 40vh;
@@ -55,14 +66,21 @@
 }
 
 @media (max-width:767px) {
+    header {
+        background: url(../img/header_bg.png) left no-repeat;
+        background-size: cover;
+    }
+    
     .header__menu {
         position: relative;
+        height: 4.5rem;
     }
 
     .header__nav {
         flex-direction: column;
         position: absolute;
         background: rgba(255, 255, 255, 0.85);
+        font-size: 1.3rem;
 
         left: 0%;
         top: 100%;
@@ -82,5 +100,153 @@
 
     input[type=checkbox]:checked + .header__nav__list {
         transform: translateX(50%);
+    }
+
+    .header__banner {
+        height: 80%;
+    }
+
+    .header__banner h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+    
+    .header__banner h2 {
+        font-size: 1.3rem;
+        letter-spacing: 1rem;
+    }
+
+    .promo {
+        padding: .5rem;
+    }
+
+    .promo a {
+        margin: .5rem;
+    }
+
+    .promo__item h4 {
+        color: ghostwhite;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .promo__num {
+        color: rgba(105, 105, 105, 0.85);
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .categories {
+        background: url(../img/categories_bg.png) right no-repeat;
+        background-size: cover;
+    }
+
+    .levis {
+        position: relative;
+        margin: 2rem 1rem;
+    }
+
+    .levis__logo {
+        position: absolute;
+        top: -2%;
+    }
+
+    .levis__slider-box {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .levis__slider-box .levis_top .levis__slide_top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .levis_left, .levis_right {
+        width: 80%;
+    }
+
+    .footer_right a {
+        margin: 0 .5rem;
+    }
+
+}
+
+@media (max-width:549px) {
+    .promo {
+        flex-wrap: wrap;
+    }
+    
+    .promo__item {
+        width: 37vw;
+        height: 37vw;
+    }
+
+    .categories__box a, 
+    .categories__item__null {
+        margin: 0 -.4rem;
+    }
+
+    .categories__box a:nth-child(odd) {
+        margin-top: -1.5rem;
+    }
+    
+    .categories__item__null:nth-child(odd) {
+        margin-top: -1rem;
+    }
+    
+    .categories__box a:nth-child(even) {
+        margin-bottom: -1.5rem;
+    }
+    
+    .categories__item__null:nth-child(even) {
+        margin-bottom: -1rem;
+    }
+
+    .footer_right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer_right a {
+        margin: .3rem;
+    }
+
+    .footer_right img {
+        width: 70%;
+    }
+}
+
+@media (max-width:425px) {
+    html, body {
+        font-size: 14px;
+    }
+
+    
+    .promo {
+        flex-wrap: wrap;
+    }
+    
+    .promo__item {
+        width: 37vw;
+        height: 37vw;
+    }
+
+    .levis_left {
+        width: 100%;
+    }
+
+    .footer_right img {
+        width: 50%;
+    }
+}
+
+@media (max-width:375px) {
+    html, body {
+        font-size: 12px;
     }
 }

@@ -16,7 +16,7 @@ nav,footer,header,aside{display: block;}
 html,body{
 	height: 100%;
 	width: 100%;
-	font-size: 100%;
+	font-size: 16px;
 	line-height: 1;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
@@ -53,6 +53,7 @@ header {
     height: 70vh;
     background: url(../img/header_bg.png) center no-repeat;
     background-size: 100%;
+    overflow: hidden;
 }
 
 .header__menu {
@@ -96,26 +97,24 @@ header {
     position: relative;
 }
 
-#header__nav_home,
-#header__nav_products,
-#header__nav_shopping,
-#header__nav_contact {
+.header__nav__check {
     display: none;
 }
-
 
 .header__nav__list {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 50%;
+    line-height: 1.5;
     
     position: absolute;
     background: rgba(255, 255, 255, 0.85);
-    transform: translateY(-150%);
+    transform: translateX(-350%);
 }
 
 input[type=checkbox]:checked + .header__nav__list {
-    transform: translateY(50%);
+    transform: translateX(0%);
+    transform: translateY(20%);
 }
 
 .header__basket {
@@ -142,6 +141,7 @@ input[type=checkbox]:checked + .header__nav__list {
     height: 100%;
     color: ghostwhite;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .header__banner h1 {
@@ -158,10 +158,11 @@ input[type=checkbox]:checked + .header__nav__list {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 
 .promo a {
-    margin: 2rem 1rem;
+    margin: 1rem;
 }
 
 .promo a:first-child {
@@ -214,7 +215,8 @@ input[type=checkbox]:checked + .header__nav__list {
 }
 
 .promo__fixed img {
-    margin: 0 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .promo a:last-child p {
@@ -299,7 +301,6 @@ input[type=checkbox]:checked + .header__nav__list {
 
 .levis__logo {
     position: absolute;
-    width: 30%;
     top: -13%;
 }
 
@@ -429,4 +430,5 @@ footer {
 }
 .footer_right a {
     margin: 0 1rem;
+    text-align: center;
 }
