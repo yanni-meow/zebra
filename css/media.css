@@ -7,9 +7,8 @@
         font-size: 1.5rem;
     }
 
-    input[type=checkbox]:checked + .header__nav__list {
-        transform: translateX(0%);
-        transform: translateY(25%);
+    .header__nav__list {
+        margin-top: 2rem;
     }
     
     .levis__logo {
@@ -33,6 +32,11 @@
 @media (max-width:1023px) {
     header {
         height: 50vh;
+    }
+
+    /* !!!!!! */
+    .header__nav li {
+        /* width: 23%; */
     }
 
     .promo a:last-child p {
@@ -92,15 +96,16 @@
 
     .header__nav__list {
         width: 200%;
+        /* display: none; */
         
         position: absolute;
         background: rgba(255, 255, 255, 0.85);
-        transform: translateX(-100%);
-    }
-
-    input[type=checkbox]:checked + .header__nav__list {
         transform: translateX(50%);
     }
+
+    /* input[type=checkbox]:checked + .header__nav__list {
+        transform: translateX(50%);
+    } */
 
     .header__banner {
         height: 80%;

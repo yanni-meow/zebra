@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="css/slick-theme.css">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;800&family=Mukta:wght@200;700&display=swap" rel="stylesheet">
     <title>Ze.bra</title>
+
+    <script src="js/jquery3.5.1.js"></script>
+
 </head>
 <body>
     <div class="container">
@@ -17,19 +20,15 @@
                 <a class="logo" href="logo">Ze<span>bra</span></a> 
                 <nav>
                     <ul class="header__nav">
-                        <li><label for="header__nav_home">Home</label></li>
-                            <input type="checkbox" class="header__nav__check" id="header__nav_home">  
+                        <li><p class="header__nav__top">Home</p>
                             <ul class="header__nav__list">
                                 <li>Lorem</li>
                                 <li>Lorem</li>
                                 <li>Lorem</li>
                                 <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
                             </ul>
-
-                        <li> <label for="header__nav_products">Products</label></li>
-                            <input type="checkbox" class="header__nav__check" id="header__nav_products">   
+                        </li>
+                        <li><p class="header__nav__top">Products</p>
                             <ul class="header__nav__list">
                                 <li><a href="#">Asics shoes</a></li>
                                 <li><a href="#">Nike air free</a></li>
@@ -38,9 +37,8 @@
                                 <li><a href="#">Nike Shox shoes</a></li>
                                 <li><a href="#">Nike AF1 shoes</a></li>
                             </ul>
-                        
-                        <li> <label for="header__nav_shopping">Shopping</label></li>
-                            <input type="checkbox" class="header__nav__check" id="header__nav_shopping">  
+                        </li>
+                        <li><p class="header__nav__top">Shopping</p>
                             <ul class="header__nav__list">
                                 <li>Lorem</li>
                                 <li>Lorem</li>
@@ -49,23 +47,30 @@
                                 <li>Lorem</li>
                                 <li>Lorem</li>
                             </ul>
-                    
-                        <li> <label for="header__nav_contact">Contact</label></li>
-                            <input type="checkbox" class="header__nav__check" id="header__nav_contact">  
+                        </li>
+                        <li><p class="header__nav__top">Contact</p>
                             <ul class="header__nav__list">
                                 <li>Lorem</li>
                                 <li>Lorem</li>
                                 <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
-                                <li>Lorem</li>
                             </ul>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__basket">
-                    <img src="img/header_basket.png" alt="#">
-                    <div class="header__basket__sum">&#36; </div>
-                    <a href="basket"><img src="img/header_arrow.png" alt="#"></a>
+                    <div class="header__basket_top">
+                        <img src="img/header_basket.png" alt="#">
+                        <p class="header__basket__sum">&#36; </p>
+                        <img id="order-arrow" src="img/header_arrow.png" alt="#">
+                    </div>
+                    <table class="header__basket_list">
+                        <caption>Your order</caption>
+                        <tr>
+                            <td><img src="img/levis_item.png" alt=""></td>
+                            <td>Mens Levis Jeans-071</td>
+                            <td>&#36;61.00</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
             <div class="header__banner">

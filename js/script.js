@@ -27,4 +27,26 @@
 //     }
 // )
 
-$()
+// $('.header__nav__top').click(function open () {
+//     $('.header__nav__list').slideDown(2000).slideUp(2000)
+// })
+
+function changeClassHeader(){
+    $(this).prev().toggleClassHeader('active')
+    }
+    $(function openMenu(){
+        $('.header__nav__top').click(function(){
+            $(this).next().slideToggle();
+            $(this).toggleClass ('active');
+        });
+    })
+
+    function changeClassOrder(){
+        $(this).prev().toggleClassOrder('active')
+        }
+        $(function openMenu(){
+            $('#order-arrow').click(function(){
+                $('.header__basket_list').slideToggle();
+                $(this).toggleClass ('active');
+            });
+        })

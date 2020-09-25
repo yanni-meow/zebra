@@ -53,20 +53,18 @@ header {
     height: 70vh;
     background: url(../img/header_bg.png) center no-repeat;
     background-size: 100%;
-    overflow: hidden;
 }
 
 .header__menu {
-    height: 5.3rem;
+    height: 5rem;
+    padding: 1rem;
     background: rgba(255, 255, 255, 0.85);
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
 
-    position: absolute;
-    top: 0;
-    width: 100vw;
+    width: 100%;
 }
 
 .logo {
@@ -83,7 +81,9 @@ header {
 
 .header__nav {
     display: flex;
+    width: max-content;
     font-size: 2rem;
+    padding: .5rem;
 }
 
 .header__nav a:visited {
@@ -91,33 +91,44 @@ header {
 }
 
 .header__nav li {
-    display: inline;
     color: dimgray;
     padding: 0 1rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.header__nav__check {
-    display: none;
+.header__nav__top {
+    cursor: pointer;
+    text-align: center;
 }
 
 .header__nav__list {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 130%;
+    height: max-content;
+    margin-top: 1.5rem;
     line-height: 1.5;
-    
-    position: absolute;
-    background: rgba(255, 255, 255, 0.85);
-    transform: translateX(-350%);
+    background: rgba(255, 255, 255, 0.85);    
+    display: none;
 }
 
-input[type=checkbox]:checked + .header__nav__list {
-    transform: translateX(0%);
-    transform: translateY(20%);
+.header__nav__list li{
+    width: max-content;
 }
 
 .header__basket {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: dimgray;
+}
+
+.header__basket_top {
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -129,8 +140,30 @@ input[type=checkbox]:checked + .header__nav__list {
     margin: 0 1rem;
 }
 
-.header__basket a img {
+.header__basket img {
     margin: .5rem 0;
+}
+
+.header__basket_list {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+    background: rgba(255, 255, 255, 0.85);
+    display: none;    
+}
+
+.header__basket_list caption {
+    text-align: right;
+    padding: 0 1rem;
+    background: rgba(255, 255, 255, 0.85);    
+}
+
+.header__basket_list td {
+    width: 30%;
+}
+
+.header__basket_list tr img {
+    max-width: 70%;
 }
 
 .header__banner {
