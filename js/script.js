@@ -1,52 +1,67 @@
-// const body = document.querySelector ('body')
-// const checkBox = document.querySelector ('.header__nav__check')
-// const menu = document.querySelector ('.header__nav__list')
+const body = document.querySelector('body');
+const clickPlace = document.querySelectorAll('.header__nav__top');
+const list = document.querySelectorAll('.header__nav__list');
 
-// if (body && checkBox) {
+if (clickPlace) {
+    clickPlace.forEach((element, i) => {
+    element.addEventListener('click', function() { 
+        list[i].classList.toggle('header__basket_list_on');
+    });
+})};
+
+
+$(document).ready(function() {
+
+// открытие меню и корзины по клику
+    // $('.header__nav__top').on('click', function(){
+    //     $(this).next().fadeToggle(300)
+    // });  
+// ИЛИ 
+    // function changeClassHeader(){
+    //     $(this).prev().toggleClass('active')
+    //     }
+    //     $(function openMenu(){
+    //         $('.header__nav__top').on('click', function(){
+    //             $(this).next().slideToggle();
+    //             $(this).toggleClass('active');
+    //         });
+    //     });
+ 
+// открытие корзины при наведении 
+    $('#order-arrow').on('mouseenter', function(){
+        $('.header__basket_list').fadeToggle(300)
+    });
+    $('.header__basket_list').on('mouseleave', function(){
+        $(this).fadeToggle(300)
+    });
+
+//увеличение элементов в фокусе    
+    // $('.promo__item').on('mouseenter', function() {
+    //     $(this).animate({'width': '21vw'}, 1);
+    //     $(this).animate({'height': '21vw'}, 1);
+    // })
+
+    // $('.promo__item').on('mouseleave', function() {
+    //     $(this).animate({'width': '20vw'}, 1);
+    //     $(this).animate({'height': '20vw'}, 1);
+    // })
+
+    
+
+// SEREJIN PLAN
+// const body = document.querySelector ('body')
+// const clickPlace = document.querySelector ('.header__nav__top')
+// const list = document.querySelector ('.header__nav__list')
+
+// if (body && clickPlace) {
 //     body.addEventListener('click', function() {
-//     if(checkBox.checked){
-//         checkBox.checked = false;
+//     if(clickPlace.click){
+//         list = false;
 //         }
 //     })
-//     menu.addEventListener('click', function(e) {
+//     list.addEventListener('click', function(e) {
 //         e.stopPropagation()
 //     })
 // }
 
-// $('header__nav').slideUp(2000).slideDown(2000);
-
-// if (body && checkBox) {
-//     if(checkBox.checked){
-//         menu.hide('3000')
-//     }
-// }
-
-// $('.header__nav__check').click(
-//     function a() {
-//         $('header__nav__list').show(3000)  
-//     }
-// )
-
-// $('.header__nav__top').click(function open () {
-//     $('.header__nav__list').slideDown(2000).slideUp(2000)
-// })
-
-function changeClassHeader(){
-    $(this).prev().toggleClassHeader('active')
-    }
-    $(function openMenu(){
-        $('.header__nav__top').click(function(){
-            $(this).next().slideToggle();
-            $(this).toggleClass ('active');
-        });
-    })
-
-    function changeClassOrder(){
-        $(this).prev().toggleClassOrder('active')
-        }
-        $(function openMenu(){
-            $('#order-arrow').click(function(){
-                $('.header__basket_list').slideToggle();
-                $(this).toggleClass ('active');
-            });
-        })
+});

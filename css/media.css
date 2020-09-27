@@ -8,12 +8,12 @@
     }
 
     .header__nav__list {
-        margin-top: 2rem;
+        top: 3.2rem;
     }
     
     .levis__logo {
-        top: -15%;
-        max-width: 20%;
+        top: -18%;
+        max-width: 30%;
     }
 
     .promo__item h4 {
@@ -34,47 +34,6 @@
         height: 50vh;
     }
 
-    /* !!!!!! */
-    .header__nav li {
-        /* width: 23%; */
-    }
-
-    .promo a:last-child p {
-        background: #fff;
-        color: #f2ca66;
-        text-transform: uppercase;
-        font-size: 1.5rem;
-        font-weight: 700;
-    }
-
-    .categories {
-        height: 40vh;
-    }
-
-    .levis__logo {
-        top: -14%;
-        max-width: 20%;
-    }
-
-    .levis_left__btm {
-        padding: 1rem 0;
-    }
-
-    .levis_left__rate {
-        margin: 0;
-    }
-
-    .levis_left__btn {
-        margin: 0;
-    }
-}
-
-@media (max-width:767px) {
-    header {
-        background: url(../img/header_bg.png) left no-repeat;
-        background-size: cover;
-    }
-    
     .header__menu {
         position: relative;
         height: 4.5rem;
@@ -95,17 +54,56 @@
     }
 
     .header__nav__list {
-        width: 200%;
-        /* display: none; */
-        
-        position: absolute;
+        width: 200%;        
+        margin-top: 2rem;
+        top: -110%;
         background: rgba(255, 255, 255, 0.85);
-        transform: translateX(50%);
+        transform: translateX(78%);
     }
 
-    /* input[type=checkbox]:checked + .header__nav__list {
-        transform: translateX(50%);
-    } */
+    .header__basket_list {
+        top: 3.5rem; 
+    }
+
+    .promo a:last-child p {
+        background: #fff;
+        color: #f2ca66;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .categories {
+        height: 40vh;
+    }
+
+    .levis__logo {
+        top: -16%;
+        max-width: 30%;
+    }
+
+    .levis_left__btm {
+        padding: 1rem 0;
+    }
+
+    .levis_left__rate {
+        margin: 0;
+    }
+
+    .levis_left__btn {
+        margin: 0;
+    }
+}
+
+@media (max-width:767px) {
+    header {
+        background: url(../img/header_bg.png) left no-repeat;
+        background-size: cover;
+    }
+
+    .header__basket_list {
+        width: 50vw;
+    }
 
     .header__banner {
         height: 80%;
@@ -155,8 +153,8 @@
     }
 
     .levis__logo {
-        position: absolute;
-        top: -2%;
+        top: -5%;
+        max-width: 40%;
     }
 
     .levis__slider-box {
@@ -180,13 +178,25 @@
 }
 
 @media (max-width:549px) {
+    html, body {
+        font-size: 14px;
+    }
+    
+    /* .header__basket_list {
+        top: 3.5rem;   
+    } */
+    
     .promo {
         flex-wrap: wrap;
     }
+
+    .promo a {
+        margin: .8rem;
+    }
     
     .promo__item {
-        width: 37vw;
-        height: 37vw;
+        width: 35vw;
+        height: 35vw;
     }
 
     .categories__box a, 
@@ -217,6 +227,10 @@
         justify-content: center;
     }
 
+    .footer_right {
+        margin: 0 .5rem;
+    }
+
     .footer_right a {
         margin: .3rem;
     }
@@ -226,14 +240,22 @@
     }
 }
 
-@media (max-width:425px) {
-    html, body {
-        font-size: 14px;
+@media (max-width:425px) {   
+    .header__basket img {
+        max-width: 35%;
+    }
+
+    .header__nav__list li{
+        padding: .2rem 1rem;
     }
 
     
     .promo {
         flex-wrap: wrap;
+    }
+
+    .promo a {
+        margin: .6rem;
     }
     
     .promo__item {
@@ -245,13 +267,36 @@
         width: 100%;
     }
 
+    .levis_left__btn {
+        font-size: 1.1rem;
+        margin: 0 1rem;
+    }
+    
+    .levis_left__btn img {
+        max-width: 40%;
+    }
+
     .footer_right img {
-        width: 50%;
+        width: 40%;
     }
 }
 
 @media (max-width:375px) {
     html, body {
         font-size: 12px;
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        padding: 0;
+    }
+
+
+
+    
+
+    .promo__item {
+        width: 35vw;
+        height: 35vw;
     }
 }
