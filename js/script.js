@@ -8,17 +8,16 @@ if(menu) {
         element.addEventListener('mouseenter', function() {
             list[i].classList.toggle('open');
     });
-})};
-
-if(list) {
-    list.forEach((element, i) => {
+});
+    menu.forEach((element, i) => {
         element.addEventListener('mouseleave', function() {
             list[i].classList.toggle('open');
-    });
-})};
+});
+});
+
+};
 
 // order open by click
-
 let basket = document.querySelector('.header__basket');
 let bTop = basket.querySelector('.header__basket_top');
 

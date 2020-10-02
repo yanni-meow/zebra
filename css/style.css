@@ -90,18 +90,19 @@ header {
     color: rgba(105, 105, 105, 0.815);
 }
 
-.header__nav li {
+.header__nav__top {
     color: dimgray;
     padding: 0 2rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.header__nav__top {
     cursor: pointer;
     text-align: center;
+}
+
+.header__nav__p {
+    font-weight: 600;
 }
 
 .header__nav__list {
@@ -110,9 +111,9 @@ header {
     width: 200%;
     height: max-content;
     line-height: 1.5;
-    background: rgba(255, 255, 255, 0.85);    
     position: absolute;
-    top: 3.5rem;
+    /* top: 3.5rem; */
+    padding: 3.5rem 0 0 0;
 
     display: none;
 }
@@ -122,7 +123,8 @@ header {
 }
 
 .header__nav__list li{
-    width: max-content;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);    
 }
 
 .header__basket {
