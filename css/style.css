@@ -86,8 +86,12 @@ header {
     padding: .5rem;
 }
 
-.header__nav a:visited {
+.header__nav a {
     color: rgba(105, 105, 105, 0.815);
+}
+
+.header__nav a:visited {
+    color: rgb(105, 105, 105);
 }
 
 .header__nav__top {
@@ -252,6 +256,10 @@ header {
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+}
+
+.promo a:hover {
+    transform: scale(1.1, 1.1);
 }
 
 .promo__item h4 {
